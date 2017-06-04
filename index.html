@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NFL Player Compare</title>
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="stylesheets/grid.css">
+  <link rel="stylesheet" href="stylesheets/popup.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+<body>
+  <div id="choose-container">
+
+    <div class="big-image">
+      <!-- <img src="images/heinzfield.jpg"> -->
+      <h1>NFL Player Compare</h1>
+    </div>
+
+    <div class="instructions">
+      <p>Welcome to NFL Player Compare!  You will be able to compare one player's stats to another for any particular week of any of the last five seasons.  Stats are available for quarterback (QB), running back (RB), wide receiver (WR), tight end (TE), and kicker (K).</p>
+      <p>To compare the statistics of two players, first pick a position, a year, and a week, then hit the <b>"Start"</b> button.  Two dropdown menus will then appear, where you will choose one player from each menu.  Then hit the <b>"Compare"</b> button, and the relevant statistics for each player will appear in a popup window.</p>
+    </div>
+
+    <div class="form-position">
+      <form>
+        <h2 align="center">Choose A Position:</h2>
+          <div class="form-group">
+              <label for="position-choice">Position</label>
+              <select name="position-choice" id="position-choice">
+                <option value="no-choice">-- Please Select --</option>
+                <!-- <optgroup label="Select a Position:"> -->
+                  <option value="QB">QB</option>
+                  <option value="RB">RB</option>
+                  <option value="WR">WR</option>
+                  <option value="TE">TE</option>
+                  <option value="K">K</option>
+                <!-- </optgroup> -->
+              </select>
+            </div>
+      </form>
+    </div>
+
+    <div class="form-year">
+      <form name="year" method="POST" action="">
+        <h2 align="center">Choose A Year:</h2>
+          <div class="form-group">
+            <label for="year">Year</label>
+            <select name="year" id="year">
+              <option value="no-choice">-- Please Select --</option>
+              <optgroup label="Select a Year:">
+                <option>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+              </optgroup>
+            </select>
+          </div>
+      </form>
+    </div>
+
+    <div class="form-week">
+      <form name="week" method="POST" action="">
+        <h2 align="center">Choose A Week:</h2>
+          <div class="form-group">
+            <label for="week">Week</label>
+            <select name="week" id="week">
+              <option value="no-choice">-- Please Select --</option>
+              <optgroup label="Select a Week:">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+              </optgroup>
+            </select>
+          </div>
+      </form>
+    </div>
+
+    <div class="select-button">
+      <a href="#">
+       <button type="submit" class="initial-select">Start</button>
+      </a>
+    </div>
+
+    <div class="form-playerOne hide">  <!-- hide -->
+      <form name="player-one" method="POST" action="">
+        <h2 align="center">Choose Your First Player</h2>
+          <div class="form-group">
+            <label for="player-one">Player One</label>
+            <select name="player-one" id="player-one">
+              <option value="no-choice">-- Please Select --</option>
+              <optgroup class="player-list" label="Select a Player:">
+
+              </optgroup>
+            </select>
+          </div>
+      </form>
+    </div>
+
+    <div class="form-playerTwo hide">  <!-- hide -->
+      <form name="player-two" method="POST" action="">
+        <h2 align="center">Choose Your Second Player</h2>
+          <div class="form-group">
+            <label for="player-two">Player Two</label>
+            <select name="player-two" id="player-two">
+              <option value="no-choice">-- Please Select --</option>
+              <optgroup class="player-list" label="Select a Player:">
+
+              </optgroup>
+            </select>
+          </div>
+      </form>
+    </div>
+
+    <div class="compare-button hide">  <!-- hide -->
+      <a>
+       <button type="submit" class="compare-initial">Compare</button>
+      </a>
+    </div>
+
+  </div>
+
+<!-- ___________________________  Popup Comparison Page  _________________________ -->
+
+    <div class="overlay">
+      <div class="content">
+        <div class="compare">
+            <div class="masthead">
+              <p>NFL Player Compare</p>
+            </div>
+
+            <div id="close">
+              <button>Close and Choose Again</button>
+            </div>
+
+            <div id="playerOne-headshot" class="player-one-info">
+            </div>
+
+            <aside class="playerOne-bio">
+            </aside>
+
+            <div class="player-one-stats">
+              <div id="playerOne-stat-display" class="player-one-stats"></div>
+            </div>
+
+          <div id="playerOne-logo"> <!-- class="player-one-info"> -->
+          </div>
+
+
+          <div id="playerTwo-headshot" class="player-two-info">
+          </div>
+
+          <aside class="playerTwo-bio">
+          </aside>
+
+          <div class="player-two-stats">
+              <div id="playerTwo-stat-display" class="player-two-stats">
+              </div>
+          </div>
+
+          <div id="playerTwo-logo">  <!-- class="player-two-info"> -->
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

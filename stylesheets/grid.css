@@ -1,0 +1,244 @@
+/* ------------------------   Grid Layout for 1st Page  ----------------------*/
+
+  /*------------ Mobile Stack -----------*/
+#choose-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /*grid-template-rows: 500px min-content 120px 40px 120px 40px;*/
+    grid-template-rows: auto;
+    grid-template-areas:
+      "big-image"
+      "instructions"
+      "form-position"
+      "form-year"
+      "form-week"
+      "select-button"
+      "."
+      "form-playerOne"
+      "form-playerTwo"
+      "."
+      "compare-button"
+      ".";
+  }
+
+.big-image {
+  grid-area: big-image;
+}
+
+.instructions {
+  grid-area: instructions;
+}
+
+.form-position {
+  grid-area: form-position;
+  justify-self: center;
+  align-self: center;
+}
+
+.form-year {
+  grid-area: form-year;
+  justify-self: center;
+  align-self: center;
+}
+
+.form-week {
+  grid-area: form-week;
+  justify-self: center;
+  align-self: center;
+}
+
+.select-button {
+  grid-area: select-button;
+  justify-self: center;
+  align-self: center;
+}
+
+.form-playerOne {
+  grid-area: form-playerOne;
+  justify-self: center;
+  align-self: center;
+}
+
+.form-playerTwo {
+  grid-area: form-playerTwo;
+  justify-self: center;
+  align-self: center;
+}
+
+.compare-button {
+  grid-area: compare-button;
+  justify-self: center;
+  align-self: start;
+}
+
+
+/*------------  Laptop / Desktop  -----------*/
+@media only screen and (min-device-width: 750px) {
+  #choose-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px min-content 150px 80px 190px 80px;
+    /*grid-template-rows: auto;*/
+    grid-template-areas:
+      "big-image big-image big-image"            /*500px*/
+      "instructions instructions instructions"   /*min-content*/
+      "form-position form-year form-week"        /*150px*/
+      ". select-button ."                        /*80px*/
+      "form-playerOne . form-playerTwo"          /*190px*/
+      ". compare-button .";                      /*80px*/
+  }
+
+  .form-playerOne {
+    justify-self: end;
+  }
+
+  .form-playerTwo {
+    justify-self: start;
+  }
+}
+
+
+/* -----------------------  Grid Layout for Comparison Popup  -------------------------*/
+
+  /*------------ Mobile Stack -----------*/
+.compare {
+    display: grid;
+    grid-template-rows: repeat(9, min-content);
+    grid-template-columns: 1fr;
+    /*grid-gap: 10px;*/
+  }
+
+.masthead {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+#close {
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: end;
+  align-self: center;
+}
+
+.player-one-info {
+  grid-row: 3;
+  grid-column: 1;
+  justify-self: center;
+}
+
+.playerOne-bio {
+  grid-row: 4;
+  grid-column: 1;
+  justify-self: center;
+}
+
+.player-one-stats {
+  grid-row: 5;
+  grid-column: 1;
+  justify-self: center;
+}
+
+#playerOne-logo {
+  grid-row: 5;
+  grid-column: 1;
+  justify-self: center;
+}
+
+.player-two-info {
+  grid-row: 6;
+  grid-column: 1;
+  justify-self: center;
+}
+
+.playerTwo-bio {
+  grid-row: 7;
+  grid-column: 1;
+  justify-self: center;
+}
+
+.player-two-stats {
+  grid-row: 8;
+  grid-column: 1;
+  justify-self: center;
+}
+
+#playerTwo-logo {
+  grid-row: 8;
+  grid-column: 1;
+  justify-self: center;
+}
+
+
+/*------------  Laptop / Desktop  -----------*/
+@media only screen and (min-device-width: 750px) {
+  .compare {
+    display: grid;
+    grid-template-rows: 75px 220px min-content;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    /*grid-gap: 10px;*/
+  }
+
+  .masthead {
+    grid-row: 1;
+    grid-column: 1 / span 4;
+  }
+
+  #close {
+    grid-row: 1;
+    grid-column: 4;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .player-one-info {
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  .playerOne-bio {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .player-two-info {
+    grid-row: 2;
+    grid-column: 3;
+    justify-self: center;
+  }
+
+  .playerTwo-bio {
+    grid-row: 2;
+    grid-column: 4;
+    justify-self: start;
+  }
+
+  .player-one-stats {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    justify-self: center;
+  }
+
+  #playerOne-logo {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    justify-self: center;
+  }
+
+  .player-two-stats {
+    grid-row: 3;
+    grid-column: 3 / span 2;
+    justify-self: center;
+  }
+
+  #playerTwo-logo {
+    grid-row: 3;
+    grid-column: 3 / span 2;
+    justify-self: center;
+  }
+
+}
+
+
+

@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+
+/*-------------------  1st Page Mobile Stack Styles  ---------------------------------*/
+
+.big-image {
+  height: 300px;
+  max-width: 100%;
+  background-image: linear-gradient(
+      rgba(0, 85, 15, 0.5),
+      rgba(0, 85, 15, 0.5)
+    ),
+  url('../images/heinzfield.jpg');
+  text-align: center;
+}
+
+.big-image h1 {
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  margin: auto;
+  font-size: 3.5em;
+}
+
+
+/*--------------------  1st Page Laptop / Desktop Styles  -----------------------------*/
+
+@media only screen and (min-device-width: 750px) {
+  .big-image {
+    height: 500px;
+    max-width: 100%;
+    background-image: linear-gradient(
+        rgba(0, 85, 15, 0.5),
+        rgba(0, 85, 15, 0.5)
+      ),
+    url('../images/heinzfield.jpg');
+    text-align: center;
+  }
+
+  .big-image h1 {
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+    /*padding-top: 15%;*/
+    font-size: 4.5em;
+  }
+
+  form {
+    font-size: 0.75em;
+  }
+
+  .instructions {
+    padding: 5px 20px;
+    font-size: 1em;
+  }
+
+}
+
+
+/* ------------------------  1st page Styles ---------------------------------------*/
+
+#choose-container {
+  font-size: 1.4em;
+}
+
+.instructions p {
+  padding: 2%;
+}
+
+select {
+  height: 2.2em;
+  font-size: 1.1em;
+}
+
+.select-button button {
+  height: 50px;
+  width: 100px;
+  font-size: 1.3em;
+  align-self: end;
+  border: 2px solid black;
+  border-radius: 12px;
+  background-color: green;
+  color: white;
+}
+
+.compare-button button {
+  height: 50px;
+  width: 160px;
+  font-size: 1.3em;
+  align-self: end;
+  border: 2px solid black;
+  border-radius: 12px;
+  background-color: lightgreen;
+  color: black;
+}
+
+
+/* ---------------------  Comparison Popup Mobile Stack Styles  ----------------------*/
+
+.masthead {
+  background-color: #009933;
+}
+
+.big-image h1 {
+  position: relative;
+  top: 40%;
+}
+
+.player-one-info {
+  margin-top: 2em;
+}
+
+#playerOne-logo, #playerTwo-logo {
+  opacity: 0.20;
+}
+
+.player-one-info, .player-two-info {
+  border: 1px solid black;
+  margin-top: 2em;
+}
+
+.highlight {
+  background-color: yellow;
+  /*background-image: url('../images/checkmark.svg');
+  height: 3em;
+  width: 3em;*/
+}
+
+#playerOne-stat-display>ul li,
+#playerTwo-stat-display>ul li {
+  list-style-type: none;
+  font-size: 1.5em;
+}
+
+#close {
+    background-color: #999;
+    margin-right: 2em;
+  }
+
+#close button {
+  height: 40px;
+  width: 140px;
+  font-size: 0.8em;
+}
+
+.masthead p {
+  font-size: 2.2em;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 1em;
+}
+
+
+/*------------  Laptop / Desktop  -----------*/
+@media only screen and (min-device-width: 750px) {
+  #close {
+    color: #999;
+  }
+
+  .player-one-info {
+    margin-left: 3%;
+  }
+
+  .player-one-info, .player-two-info {
+    height: 200px;
+    width: 200px;
+  }
+
+  .playerOne-bio {
+    margin-left: 3%;
+  }
+
+  #playerOne-logo, #playerTwo-logo, .player-one-stats, .player-two-stats {
+    padding-top: 20px;
+  }
+
+  .masthead p {
+    height: 75px;
+    margin: 12.5px;
+    padding-top:2.5px;
+  }
+
+}
