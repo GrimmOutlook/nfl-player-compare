@@ -214,7 +214,26 @@ function initialSelect(){
       $('.hide').removeClass('hide');
       }
       else{
-        alert("Please pick a position, a year, and a week!");
+        // alert("Please pick a position, a year, and a week!");
+        toastr["error"]("You done messed up, son!", "Error");
+        $(toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-left",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+          }
+        );
       }
   });
 }
@@ -224,7 +243,10 @@ function selectCompare(){
   $('.compare-initial').click(function(e){
     state.selected.playerOne = $('#player-one').find('option:selected').val();
     state.selected.playerTwo = $('#player-two').find('option:selected').val();
-      if ((state.selected.playerOne != "no-choice") && (state.selected.playerTwo != "no-choice")){
+      if (state.selected.playerOne === state.selected.playerTwo){
+        alert("Please select two different players.");
+      }
+      else if ((state.selected.playerOne != "no-choice") && (state.selected.playerTwo != "no-choice")){
         $('.overlay').addClass('is-on');
         displayStats(state);
       }
@@ -238,6 +260,8 @@ function selectCompare(){
 function closePopup(){
   $('#close').on('click', function() {
     $('.overlay').removeClass('is-on');
+    state.selected.playerOne = $('#player-one').val('no-choice');
+    state.selected.playerTwo = $('#player-two').val('no-choice');
   });
 }
 

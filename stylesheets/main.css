@@ -8,17 +8,17 @@ body {
   visibility: hidden;
 }
 
-
 /*-------------------  1st Page Mobile Stack Styles  ---------------------------------*/
 
 .big-image {
-  height: 300px;
+  height: 600px;
   max-width: 100%;
   background-image: linear-gradient(
       rgba(0, 85, 15, 0.5),
       rgba(0, 85, 15, 0.5)
     ),
   url('../images/heinzfield.jpg');
+  /*background-size: cover;*/
   text-align: center;
 }
 
@@ -37,11 +37,14 @@ body {
   .big-image {
     height: 500px;
     max-width: 100%;
-    background-image: linear-gradient(
+    background-image: /*linear-gradient(
         rgba(0, 85, 15, 0.5),
         rgba(0, 85, 15, 0.5)
-      ),
+      ),*/
     url('../images/heinzfield.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
     text-align: center;
   }
 
