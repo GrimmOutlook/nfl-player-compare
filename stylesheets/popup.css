@@ -62,6 +62,7 @@
   width: 90%;
   height: 90%;
   /*opacity: 0;*/
+  overflow: scroll;
   visibility: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;

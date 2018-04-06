@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>NFL Player Compare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/nfl.ico">
   <link rel="stylesheet" href="stylesheets/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="stylesheets/grid.css">
   <link rel="stylesheet" href="stylesheets/popup.css">
   <link rel="stylesheet" href="stylesheets/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <div id="choose-container">
@@ -51,6 +52,7 @@
             <select name="year" id="year">
               <option value="no-choice">-- Please Select --</option>
               <optgroup label="Select a Year:">
+                <option>2017</option>
                 <option>2016</option>
                 <option>2015</option>
                 <option>2014</option>
@@ -142,41 +144,48 @@
     <div class="overlay">
       <div class="content">
         <div class="compare">
-            <div class="masthead">
+          <div class="masthead">
+            <div class="title">
               <p>NFL Player Compare</p>
             </div>
 
             <div id="close">
               <button>Close and Choose Again</button>
             </div>
+          </div>
 
+          <div class="playerOne-stuff">
             <div id="playerOne-headshot" class="player-one-info">
             </div>
 
             <aside class="playerOne-bio">
             </aside>
+          </div>
 
-            <div class="player-one-stats">
-              <div id="playerOne-stat-display" class="player-one-stats"></div>
+          <div class="player-one-stats">
+            <div id="playerOne-stat-display" class="player-one-stats"></div>
+          </div>
+
+          <!-- <div id="playerOne-logo"> class="player-one-info">
+          </div> -->
+
+          <div class="border-between"></div>
+
+          <div class="playerTwo-stuff">
+            <div id="playerTwo-headshot" class="player-two-info">
             </div>
 
-          <div id="playerOne-logo"> <!-- class="player-one-info"> -->
+            <aside class="playerTwo-bio">
+            </aside>
           </div>
-
-
-          <div id="playerTwo-headshot" class="player-two-info">
-          </div>
-
-          <aside class="playerTwo-bio">
-          </aside>
 
           <div class="player-two-stats">
               <div id="playerTwo-stat-display" class="player-two-stats">
               </div>
           </div>
 
-          <div id="playerTwo-logo">  <!-- class="player-two-info"> -->
-          </div>
+         <!--  <div id="playerTwo-logo">  class="player-two-info">
+          </div> -->
 
 
         </div>

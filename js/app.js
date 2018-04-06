@@ -188,15 +188,15 @@ function compare(playerOneStats, playerTwoStats){
 //Fxn that displays the headshot and logo for both players:
 function displayPhoto(playerOneObject, playerTwoObject){
   var headshotOne = '<img src="http://s.nflcdn.com/static/content/public/static/img/fantasy/transparent/200x200/' + playerOneObject.esbid + '.png">';
-  var teamLogoOne = '<img src="http://fantasy.nfl.com/static/img/clubs/' + playerOneObject.teamAbbr.toLowerCase() + '/280x240_1495738232.png">';
+  // var teamLogoOne = '<img src="http://s.nflcdn.com/static/content/public/static/img/fantasy/player-card/headshot-logo-bg/' + playerOneObject.teamAbbr.toUpperCase() + '.png">';
 
   var headshotTwo = '<img src="http://s.nflcdn.com/static/content/public/static/img/fantasy/transparent/200x200/' + playerTwoObject.esbid + '.png">';
-  var teamLogoTwo = '<img src="http://fantasy.nfl.com/static/img/clubs/' + playerTwoObject.teamAbbr.toLowerCase() + '/280x240_1495738232.png">';
+  // var teamLogoTwo = '<img src="http://fantasy.nfl.com/static/img/clubs/' + playerTwoObject.teamAbbr.toLowerCase() + '/280x240_1495738232.png">';
 
   $('#playerOne-headshot').html(headshotOne);
-  $('#playerOne-logo').html(teamLogoOne);
+  // $('#playerOne-logo').html(teamLogoOne);
   $('#playerTwo-headshot').html(headshotTwo);
-  $('#playerTwo-logo').html(teamLogoTwo);
+  // $('#playerTwo-logo').html(teamLogoTwo);
 }
 
 

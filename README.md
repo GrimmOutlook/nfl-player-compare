@@ -4,7 +4,7 @@ http://nfl-player-compare.herokuapp.com/index.html
 
 NFL Player Compare compares two NFL players at a particular position based on relevant statistics.  Players' statistics are displayed for a single week in a single season.  The user inputs the position, the season (year), and the week for comparison.  Based on that information, the call to the API listed below is made and two identical dropdown menus are displayed from which the user selects two players.  Once the players are selected, the relevant statistics are displayed along with a comparison denoted by yellow highlighting.  The user can then close the popup window and choose another set of players from the same position-year-week set of choices, or choose a new set of position, year, and week criteria.
 
-## Code:
+## Tech Stack:
 
 NFL Player Compare is the 1st Capstone Project for Thinkful's Full-Stack Web Development Course.  It encompasses HTML, CSS, JavaScript, jQuery, AJAX, and call(s) to an API.
 

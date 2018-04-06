@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 1fr;
     /*grid-template-rows: 500px min-content 120px 40px 120px 40px;*/
-    grid-template-rows: auto;
+    /*grid-template-rows: auto;*/
     grid-template-areas:
       "big-image"
       "instructions"
@@ -77,7 +77,7 @@
   #choose-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 500px min-content 150px 80px 190px 80px;
+    /*grid-template-rows: 500px min-content 150px 80px 190px 80px;*/
     /*grid-template-rows: auto;*/
     grid-template-areas:
       "big-image big-image big-image"            /*500px*/
@@ -102,17 +102,61 @@
 
   /*------------ Mobile Stack -----------*/
 .compare {
-    display: grid;
-    grid-template-rows: repeat(9, min-content);
-    grid-template-columns: 1fr;
-    /*grid-gap: 10px;*/
-  }
-
-.masthead {
-  grid-row: 1;
-  grid-column: 1;
+  display: grid;
+  grid-gap: 1%;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "masthead"
+    "bio-1"
+    /*"logo-1"*/
+    "stats-1"
+    "border"
+    "bio-2"
+    /*"logo-2"*/
+    "stats-2";
 }
 
+.masthead {
+ grid-area: masthead;
+ display: flex;
+}
+
+.playerOne-stuff {
+  grid-area: bio-1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.player-one-stats {
+  grid-area: stats-1;
+  justify-self: center;
+}
+
+.border-between {
+  grid-area: border;
+}
+
+/*.playerOne-logo {
+  grid-area: bio-1;
+  justify-self: center;
+}*/
+
+.playerTwo-stuff {
+  grid-area: bio-2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.player-two-stats {
+  grid-area: stats-2;
+  justify-self: center;
+}
+
+/*.playerTwo-logo {
+  grid-area: logo-2;
+  justify-self: center;
+}*/
+/*
 #close {
   grid-row: 1;
   grid-column: 1;
@@ -120,122 +164,50 @@
   align-self: center;
 }
 
-.player-one-info {
-  grid-row: 3;
-  grid-column: 1;
-  justify-self: center;
-}
-
-.playerOne-bio {
-  grid-row: 4;
-  grid-column: 1;
-  justify-self: center;
-}
-
-.player-one-stats {
-  grid-row: 5;
-  grid-column: 1;
-  justify-self: center;
-}
-
-#playerOne-logo {
-  grid-row: 5;
-  grid-column: 1;
-  justify-self: center;
-}
-
-.player-two-info {
-  grid-row: 6;
-  grid-column: 1;
-  justify-self: center;
-}
-
-.playerTwo-bio {
-  grid-row: 7;
-  grid-column: 1;
-  justify-self: center;
-}
-
-.player-two-stats {
-  grid-row: 8;
-  grid-column: 1;
-  justify-self: center;
-}
-
-#playerTwo-logo {
-  grid-row: 8;
-  grid-column: 1;
-  justify-self: center;
-}
-
 
 /*------------  Laptop / Desktop  -----------*/
 @media only screen and (min-device-width: 750px) {
   .compare {
     display: grid;
-    grid-template-rows: 75px 220px min-content;
-    grid-template-columns: 2fr 1fr 2fr 1fr;
-    /*grid-gap: 10px;*/
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .masthead {
     grid-row: 1;
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 6;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  #close {
-    grid-row: 1;
-    grid-column: 4;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .player-one-info {
+  .playerOne-stuff {
     grid-row: 2;
-    grid-column: 1;
-    justify-self: center;
+    grid-column: 1 / span 3;
   }
 
-  .playerOne-bio {
+  .playerTwo-stuff {
     grid-row: 2;
-    grid-column: 2;
-    justify-self: start;
-  }
-
-  .player-two-info {
-    grid-row: 2;
-    grid-column: 3;
-    justify-self: center;
-  }
-
-  .playerTwo-bio {
-    grid-row: 2;
-    grid-column: 4;
-    justify-self: start;
+    grid-column: 4 / span 3;
   }
 
   .player-one-stats {
     grid-row: 3;
-    grid-column: 1 / span 2;
-    justify-self: center;
-  }
-
-  #playerOne-logo {
-    grid-row: 3;
-    grid-column: 1 / span 2;
-    justify-self: center;
+    grid-column: 1 / span 3;
   }
 
   .player-two-stats {
     grid-row: 3;
-    grid-column: 3 / span 2;
-    justify-self: center;
+    grid-column: 4 / span 3;
   }
 
-  #playerTwo-logo {
-    grid-row: 3;
-    grid-column: 3 / span 2;
+  .border-between {
+    opacity: 0;
+  }
+
+  /*#close {
+    grid-row: 1;
+    grid-column: 4;
     justify-self: center;
+    align-self: center;
   }
 
 }
