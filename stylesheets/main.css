@@ -163,7 +163,6 @@ select {
 }
 
 #close {
-  /*background-color: #999;*/
   margin-right: 2em;
   align-self: center;
 }
@@ -189,10 +188,6 @@ select {
 
 /*------------  Laptop / Desktop  -----------*/
 @media only screen and (min-device-width: 750px) {
-  #close {
-    color: #999;
-  }
-
   .player-one-info {
     margin-left: 3%;
   }
