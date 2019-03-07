@@ -1,4 +1,4 @@
-var endpointURLScoring = "http://api.fantasy.nfl.com/v1/players/scoringleaders";
+var endpointURLScoring = "https://api.fantasy.nfl.com/v1/players/scoringleaders";
 
 var state = {
   selected:{
@@ -39,7 +39,7 @@ function displayDropdown(playerData){
   var player = {};
   var players = [];
   var resultElement = '';
-
+  console.log('playerData: ', playerData);
   var selectedPosition = Object.keys(playerData.positions)[0];
   var selectedPlayers = playerData.positions[selectedPosition]; //array of objects
 
